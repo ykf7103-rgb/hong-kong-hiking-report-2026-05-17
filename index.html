@@ -1,0 +1,647 @@
+<!doctype html>
+<html lang="zh-Hant-HK">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>今日香港短途靚景行山建議｜2026-05-17</title>
+  <style>
+    :root {
+      --ink: #18211c;
+      --muted: #5b665f;
+      --line: #dfe7df;
+      --bg: #f7f6f1;
+      --panel: #ffffff;
+      --soft: #e8f0e6;
+      --accent: #2d6a4f;
+      --accent-2: #8a5a2b;
+      --warn: #9a5a00;
+      --danger: #9f2d20;
+      --shadow: 0 14px 36px rgba(24, 33, 28, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: "Noto Sans TC", "Microsoft JhengHei", "PingFang TC", Arial, sans-serif;
+      background: var(--bg);
+      line-height: 1.65;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    header {
+      color: #fff;
+      background:
+        linear-gradient(90deg, rgba(7, 31, 22, 0.82), rgba(7, 31, 22, 0.28)),
+        url("hiking_report_assets/peak_1.jpg") center / cover no-repeat;
+      min-height: 470px;
+      display: flex;
+      align-items: end;
+    }
+
+    .hero-inner {
+      width: min(1180px, calc(100% - 36px));
+      margin: 0 auto;
+      padding: 96px 0 42px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      color: #ecf6eb;
+      font-weight: 700;
+      letter-spacing: 0;
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      padding: 8px 12px;
+      border-radius: 6px;
+      backdrop-filter: blur(8px);
+    }
+
+    h1 {
+      margin: 18px 0 14px;
+      max-width: 840px;
+      font-size: clamp(38px, 6vw, 72px);
+      line-height: 1.05;
+      letter-spacing: 0;
+    }
+
+    .hero-copy {
+      max-width: 760px;
+      font-size: 19px;
+      color: #eef6ef;
+    }
+
+    main {
+      width: min(1180px, calc(100% - 36px));
+      margin: 0 auto;
+      padding: 30px 0 56px;
+    }
+
+    .notice-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 18px;
+      margin: 24px 0 28px;
+    }
+
+    .notice,
+    .quick-rank,
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+
+    .notice,
+    .quick-rank {
+      padding: 20px;
+    }
+
+    .notice h2,
+    .quick-rank h2,
+    .card h2 {
+      margin: 0 0 10px;
+      font-size: 25px;
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+
+    .notice p,
+    .quick-rank p {
+      margin: 8px 0;
+    }
+
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 10px;
+      border-radius: 6px;
+      border: 1px solid var(--line);
+      background: var(--soft);
+      color: #24432f;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .badge.warn {
+      color: var(--warn);
+      background: #fff5df;
+      border-color: #f0d59a;
+    }
+
+    .badge.danger {
+      color: var(--danger);
+      background: #fff0ee;
+      border-color: #efbbb3;
+    }
+
+    .rank-list {
+      margin: 12px 0 0;
+      padding-left: 22px;
+    }
+
+    .rank-list li {
+      margin: 5px 0;
+      padding-left: 3px;
+    }
+
+    .section-title {
+      margin: 42px 0 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .section-title h2 {
+      margin: 0;
+      font-size: 30px;
+    }
+
+    .section-title span {
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .card {
+      overflow: hidden;
+      margin: 0 0 28px;
+    }
+
+    .card-head {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 16px;
+      align-items: start;
+      padding: 24px 24px 16px;
+      border-bottom: 1px solid var(--line);
+      background: linear-gradient(180deg, #fff, #fbfcfa);
+    }
+
+    .card-kicker {
+      color: var(--accent-2);
+      font-weight: 800;
+      margin-bottom: 4px;
+    }
+
+    .score {
+      text-align: right;
+      min-width: 150px;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .score strong {
+      color: var(--accent);
+      display: block;
+      font-size: 28px;
+      line-height: 1.1;
+    }
+
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      padding: 16px 16px 0;
+    }
+
+    figure {
+      margin: 0;
+      min-width: 0;
+    }
+
+    figure img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      display: block;
+      border-radius: 6px;
+      background: #dce5dc;
+    }
+
+    figcaption {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 5px;
+    }
+
+    .info {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      padding: 20px 24px 22px;
+    }
+
+    .info-block {
+      border-top: 1px solid var(--line);
+      padding-top: 13px;
+    }
+
+    .info-block.full {
+      grid-column: 1 / -1;
+    }
+
+    .info-block h3 {
+      margin: 0 0 7px;
+      font-size: 16px;
+      letter-spacing: 0;
+    }
+
+    .info-block p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .source-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 0 24px 24px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .source-row a {
+      font-weight: 700;
+    }
+
+    .footer {
+      margin-top: 36px;
+      padding: 22px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .print-button {
+      border: 1px solid #cdd9cf;
+      background: #fff;
+      color: var(--ink);
+      padding: 10px 14px;
+      border-radius: 6px;
+      font: inherit;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .print-button:hover {
+      background: var(--soft);
+    }
+
+    @media (max-width: 820px) {
+      header {
+        min-height: 420px;
+      }
+
+      .notice-grid,
+      .info,
+      .card-head {
+        grid-template-columns: 1fr;
+      }
+
+      .score {
+        text-align: left;
+      }
+
+      .photo-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-title {
+        align-items: start;
+        flex-direction: column;
+      }
+    }
+
+    @media print {
+      header {
+        min-height: auto;
+        color: var(--ink);
+        background: none;
+        border-bottom: 2px solid var(--line);
+      }
+
+      .hero-copy,
+      .eyebrow {
+        color: var(--ink);
+        background: none;
+        border: 0;
+        padding-left: 0;
+      }
+
+      .card,
+      .notice,
+      .quick-rank {
+        box-shadow: none;
+        break-inside: avoid;
+      }
+
+      .print-button {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="hero-inner">
+      <div class="eyebrow">2026年5月17日 星期日｜香港短途靚景行山</div>
+      <h1>今日可駕車到附近、短時間完成、又有真風景的10個選擇</h1>
+      <p class="hero-copy">按今日天氣，我把高風險開揚山脊剔走，優先選水塘、林蔭、平路、容易折返的路線。每個地點下面都有至少3張已下載到本機的真實相片。</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="notice-grid">
+      <div class="notice">
+        <h2>今日天氣判斷</h2>
+        <p>香港天文台資料顯示，截至 2026-05-17 13:02，強烈季候風信號現正生效；下午及今晚多雲，有幾陣驟雨，離岸及高地吹強風，風勢有時疾勁。</p>
+        <p>今日最重要不是「最高海拔」，而是「短、穩、可撤退」。避免龍脊、釣魚翁、飛鵝山、大帽山、萬宜東壩這類開揚位。</p>
+        <div class="badges">
+          <span class="badge danger">強烈季候風信號</span>
+          <span class="badge warn">高地強風</span>
+          <span class="badge warn">雨後濕滑</span>
+          <span class="badge">短線優先</span>
+          <span class="badge">水塘/林蔭優先</span>
+        </div>
+      </div>
+
+      <div class="quick-rank">
+        <h2>即刻出發排序</h2>
+        <ol class="rank-list">
+          <li>山頂盧吉道環迴</li>
+          <li>香港仔水塘</li>
+          <li>鶴藪水塘</li>
+          <li>新娘潭</li>
+          <li>流水響水塘</li>
+          <li>城門水塘短段</li>
+          <li>大潭水塘短段</li>
+          <li>下城門水塘</li>
+          <li>大棠短段</li>
+          <li>紅香爐峰</li>
+        </ol>
+      </div>
+    </section>
+
+    <div class="section-title">
+      <h2>10個詳細建議</h2>
+      <button class="print-button" onclick="window.print()">列印 / 另存PDF</button>
+    </div>
+
+    <article class="card">
+      <div class="card-head">
+        <div>
+          <div class="card-kicker">01｜最高推薦</div>
+          <h2>山頂盧吉道環迴 Peak Circle Walk</h2>
+        </div>
+        <div class="score"><strong>5/5</strong>短、平、撤退易</div>
+      </div>
+      <div class="photo-grid">
+        <figure><img src="hiking_report_assets/peak_1.jpg" alt="山頂盧吉道維港景色" loading="lazy"><figcaption>山頂盧吉道實景</figcaption></figure>
+        <figure><img src="hiking_report_assets/peak_2.jpg" alt="山頂盧吉道樹蔭步道" loading="lazy"><figcaption>林蔭平路</figcaption></figure>
+        <figure><img src="hiking_report_assets/peak_3.jpg" alt="山頂環迴城市景觀" loading="lazy"><figcaption>維港與城市景觀</figcaption></figure>
+      </div>
+      <div class="info">
+        <div class="info-block"><h3>泊車/落腳</h3><p>導航到 The Peak Galleria, 118 Peak Road。山頂商場有停車場、洗手間、餐飲，最容易即日處理。</p></div>
+        <div class="info-block"><h3>短線走法</h3><p>由山頂廣場入盧吉道，行到主要維港觀景位後折返；天氣穩定才接夏力道成環。</p></div>
+        <div class="info-block"><h3>時間/距離</h3><p>完整環迴約3.5公里、約1小時；今日只行精華段約30至45分鐘已足夠。</p></div>
+        <div class="info-block"><h3>景觀</h3><p>維港、中環、西九、九龍半島；雲多也有城市層次，是今日最穩的靚景選擇。</p></div>
+        <div class="info-block full"><h3>今日提醒</h3><p>山頂仍會有陣風，近欄杆不要久留；如雨勢轉密，可以立即返商場。</p></div>
+      </div>
+      <div class="source-row">資料/圖片：<a href="https://www.discoverhongkong.com/eng/place-to-go/travel.guide-peak-circle-walk.html">香港旅發局</a><a href="https://www.hanglungmalls.com/en/parking?mall=peak-galleria">Peak Galleria 停車資訊</a></div>
+    </article>
+
+    <article class="card">
+      <div class="card-head">
+        <div>
+          <div class="card-kicker">02｜雨後瀑布</div>
+          <h2>新娘潭 Bride’s Pool</h2>
+        </div>
+        <div class="score"><strong>4.5/5</strong>短線瀑布景</div>
+      </div>
+      <div class="photo-grid">
+        <figure><img src="hiking_report_assets/bride_1.jpg" alt="新娘潭瀑布" loading="lazy"><figcaption>新娘潭瀑布</figcaption></figure>
+        <figure><img src="hiking_report_assets/bride_2.jpg" alt="新娘潭溪谷" loading="lazy"><figcaption>溪谷與石級</figcaption></figure>
+        <figure><img src="hiking_report_assets/bride_3.jpg" alt="新娘潭自然景色" loading="lazy"><figcaption>自然教育徑景色</figcaption></figure>
+      </div>
+      <div class="info">
+        <div class="info-block"><h3>泊車/落腳</h3><p>導航 Bride’s Pool Car Park 或 Bride’s Pool Road。周日車位有限，滿位就轉鶴藪或流水響。</p></div>
+        <div class="info-block"><h3>短線走法</h3><p>由停車場附近入自然教育徑，先看石橋，再看新娘潭；體力夠才加照鏡潭。</p></div>
+        <div class="info-block"><h3>時間/距離</h3><p>約1公里、約1小時，屬短線，但有石級和濕滑位置。</p></div>
+        <div class="info-block"><h3>景觀</h3><p>瀑布、石橋、溪谷、樹蔭。今日多雲其實適合拍瀑布，光線較柔和。</p></div>
+        <div class="info-block full"><h3>今日提醒</h3><p>雨後石面非常滑，不落水、不企瀑布邊、不為拍照跨欄。</p></div>
+      </div>
+      <div class="source-row">資料/圖片：<a href="https://www.discoverhongkong.com/eng/place-to-go/travel.guide-bride-s-pool.html">香港旅發局</a></div>
+    </article>
+
+    <article class="card">
+      <div class="card-head">
+        <div>
+          <div class="card-kicker">03｜林蔭水塘</div>
+          <h2>鶴藪水塘 Hok Tau Reservoir</h2>
+        </div>
+        <div class="score"><strong>4.5/5</strong>低風險舒服線</div>
+      </div>
+      <div class="photo-grid">
+        <figure><img src="hiking_report_assets/hoktau_1.jpg" alt="鶴藪水塘水面" loading="lazy"><figcaption>鶴藪水塘</figcaption></figure>
+        <figure><img src="hiking_report_assets/hoktau_2.jpg" alt="鶴藪水塘林蔭" loading="lazy"><figcaption>林蔭路段</figcaption></figure>
+        <figure><img src="hiking_report_assets/hoktau_3.jpg" alt="鶴藪水塘水邊" loading="lazy"><figcaption>水塘邊景色</figcaption></figure>
+      </div>
+      <div class="info">
+        <div class="info-block"><h3>泊車/落腳</h3><p>導航 Hok Tau Reservoir 或 Hok Tau Road。車位有限，愈早到愈好。</p></div>
+        <div class="info-block"><h3>短線走法</h3><p>走鶴藪水塘家樂徑，繞水塘一圈；不需要上高位。</p></div>
+        <div class="info-block"><h3>時間/距離</h3><p>約2.5公里、約1小時。路線短，今日很合適。</p></div>
+        <div class="info-block"><h3>景觀</h3><p>新月形水塘、林蔭、水面倒影、安靜郊遊感。</p></div>
+        <div class="info-block full"><h3>今日提醒</h3><p>整體比開揚山脊穩，但雨後仍要慢行；如突然下雨，原路返車最直接。</p></div>
+      </div>
+      <div class="source-row">資料/圖片：<a href="https://www.gohk.gov.hk/en/spots/spot_detail.php?spot=Hok+Tau+Reservoir">政府18區</a></div>
+    </article>
+
+    <article class="card">
+      <div class="card-head">
+        <div>
+          <div class="card-kicker">04｜天空之鏡</div>
+          <h2>流水響水塘 Lau Shui Heung Reservoir</h2>
+        </div>
+        <div class="score"><strong>4/5</strong>短走影相靚</div>
+      </div>
+      <div class="photo-grid">
+        <figure><img src="hiking_report_assets/lau_1.jpg" alt="流水響水塘倒影" loading="lazy"><figcaption>流水響水塘倒影</figcaption></figure>
+        <figure><img src="hiking_report_assets/lau_2.jpg" alt="流水響水塘林木" loading="lazy"><figcaption>水邊林木</figcaption></figure>
+        <figure><img src="hiking_report_assets/lau_3.jpg" alt="流水響水塘步道" loading="lazy"><figcaption>水塘步道</figcaption></figure>
+      </div>
+      <div class="info">
+        <div class="info-block"><h3>泊車/落腳</h3><p>導航 Lau Shui Heung Reservoir 或 Lau Shui Heung Road。車位少，滿位可轉鶴藪。</p></div>
+        <div class="info-block"><h3>短線走法</h3><p>今日只行水塘邊短段，拍倒影、林道、水壩後折返，不做完整7公里路線。</p></div>
+        <div class="info-block"><h3>時間/距離</h3><p>短走約45至75分鐘。官方完整路線約7公里、約3小時，今日不建議全走。</p></div>
+        <div class="info-block"><h3>景觀</h3><p>水面倒影、落羽杉感覺的林木、安靜水塘灣位。</p></div>
+        <div class="info-block full"><h3>今日提醒</h3><p>有風時倒影會散；水邊泥路雨後滑，保持在清晰路徑上。</p></div>
+      </div>
+      <div class="source-row">資料/圖片：<a href="https://www.discoverhongkong.com/eng/place-to-go/travel.guide-lau-shui-heung-reservoir.html">香港旅發局</a></div>
+    </article>
+
+    <article class="card">
+      <div class="card-head">
+        <div>
+          <div class="card-kicker">05｜近市區水塘</div>
+          <h2>香港仔水塘 Aberdeen Reservoir</h2>
+        </div>
+        <div class="score"><strong>4.5/5</strong>易去易走</div>
+      </div>
+      <div class="photo-grid">
+        <figure><img src="hiking_report_assets/aberdeen_1.jpg" alt="香港仔郊野公園" loading="lazy"><figcaption>香港仔郊野公園</figcaption></figure>
+        <figure><img src="hiking_report_assets/aberdeen_2.jpg" alt="香港仔自然教育徑" loading="lazy"><figcaption>自然教育徑</figcaption></figure>
+        <figure><img src="hiking_report_assets/aberdeen_3.jpg" alt="香港仔下水塘" loading="lazy"><figcaption>香港仔下水塘</figcaption></figure>
+      </div>
+      <div class="info">
+        <div class="info-block"><h3>泊車/落腳</h3><p>建議泊香港仔市區合法停車場，再的士到 Aberdeen Reservoir Road 或香港仔水塘道入口。</p></div>
+        <div class="info-block"><h3>短線走法</h3><p>由水塘道入口上，行下水塘壩和自然教育徑一段，再原路返。</p></div>
+        <div class="info-block"><h3>時間/距離</h3><p>自然教育徑約1.2公里，約1小時；樹木研習徑約2.5公里，可按天氣加減。</p></div>
+        <div class="info-block"><h3>景觀</h3><p>水壩、下水塘、密林、港島南區山谷感。</p></div>
+        <div class="info-block full"><h3>今日提醒</h3><p>水塘道有車輛出入，靠邊行；斜路和石壆濕滑時不要急行。</p></div>
+      </div>
+      <div class="source-row">資料/圖片：<a href="https://www.afcd.gov.hk/english/country/cou_vis/cou_vis_cou/cou_vis_cou_abe/cou_vis_cou_abe.html">漁護署</a><a href="https://www.gohk.gov.hk/en/spots/spot_detail.php?spot=Aberdeen+Country+Park+and+Aberdeen+Reservoir">政府18區</a></div>
+    </article>
+
+    <article class="card">
+      <div class="card-head">
+        <div>
+          <div class="card-kicker">06｜歷史水務建築</div>
+          <h2>大潭水塘群 Tai Tam Country Park</h2>
+        </div>
+        <div class="score"><strong>4/5</strong>只走水塘短段</div>
+      </div>
+      <div class="photo-grid">
+        <figure><img src="hiking_report_assets/taitam_1.jpg" alt="大潭郊野公園水塘" loading="lazy"><figcaption>大潭郊野公園</figcaption></figure>
+        <figure><img src="hiking_report_assets/taitam_2.jpg" alt="大潭水塘景色" loading="lazy"><figcaption>水塘景色</figcaption></figure>
+        <figure><img src="hiking_report_assets/taitam_3.jpg" alt="大潭水塘道路" loading="lazy"><figcaption>水塘路段</figcaption></figure>
+      </div>
+      <div class="info">
+        <div class="info-block"><h3>泊車/落腳</h3><p>可泊黃泥涌峽一帶合法停車場，再入 Tai Tam Reservoir Road。不要在郊野路邊硬泊。</p></div>
+        <div class="info-block"><h3>短線走法</h3><p>只行水塘路、古橋、壩位一段，1至1.5小時折返。</p></div>
+        <div class="info-block"><h3>時間/距離</h3><p>按起點不同可自由截短。今日不建議接紫羅蘭山、孖崗等開揚山徑。</p></div>
+        <div class="info-block"><h3>景觀</h3><p>古橋、石壩、水務建築、綠樹和水塘倒影。</p></div>
+        <div class="info-block full"><h3>今日提醒</h3><p>大潭較容易越行越長，今日要預先定折返點；高位強風時不上山脊。</p></div>
+      </div>
+      <div class="source-row">資料/圖片：<a href="https://www.gohk.gov.hk/en/spots/spot_detail.php?spot=Tai+Tam+Country+Park">政府18區</a></div>
+    </article>
+
+    <article class="card">
+      <div class="card-head">
+        <div>
+          <div class="card-kicker">07｜白千層林</div>
+          <h2>城門水塘菠蘿壩 / 白千層林 Shing Mun Reservoir</h2>
+        </div>
+        <div class="score"><strong>4/5</strong>景靚但車位緊</div>
+      </div>
+      <div class="photo-grid">
+        <figure><img src="hiking_report_assets/shingmun_1.jpg" alt="城門水塘白千層林" loading="lazy"><figcaption>白千層林</figcaption></figure>
+        <figure><img src="hiking_report_assets/shingmun_2.jpg" alt="城門水塘水邊景色" loading="lazy"><figcaption>水塘邊</figcaption></figure>
+        <figure><img src="hiking_report_assets/shingmun_3.jpg" alt="城門水塘山谷" loading="lazy"><figcaption>山谷與水塘</figcaption></figure>
+      </div>
+      <div class="info">
+        <div class="info-block"><h3>泊車/落腳</h3><p>導航 Pineapple Dam, Shing Mun Reservoir。周日車位緊，泊荃灣再搭小巴82或的士更穩。</p></div>
+        <div class="info-block"><h3>短線走法</h3><p>由菠蘿壩入，只走白千層林、水塘邊、主壩附近，1至1.5小時折返。</p></div>
+        <div class="info-block"><h3>時間/距離</h3><p>官方完整路線約9.5公里、約3小時；今日只取精華短段。</p></div>
+        <div class="info-block"><h3>景觀</h3><p>白千層林、水塘灣位、主壩、山谷景，是短時間出片好選擇。</p></div>
+        <div class="info-block full"><h3>今日提醒</h3><p>不要拿食物膠袋招惹野生動物；雨後近水邊泥地會滑。</p></div>
+      </div>
+      <div class="source-row">資料/圖片：<a href="https://www.discoverhongkong.com/eng/place-to-go/travel.guide-shing-mun-reservoir.html">香港旅發局</a></div>
+    </article>
+
+    <article class="card">
+      <div class="card-head">
+        <div>
+          <div class="card-kicker">08｜主壩與溢洪口</div>
+          <h2>下城門水塘 Lower Shing Mun Reservoir</h2>
+        </div>
+        <div class="score"><strong>3.5/5</strong>短但有開揚位</div>
+      </div>
+      <div class="photo-grid">
+        <figure><img src="hiking_report_assets/lowershingmun_1.jpg" alt="下城門水塘溢洪口" loading="lazy"><figcaption>溢洪口</figcaption></figure>
+        <figure><img src="hiking_report_assets/lowershingmun_2.jpg" alt="下城門水塘溢洪口近景" loading="lazy"><figcaption>水務景觀</figcaption></figure>
+        <figure><img src="hiking_report_assets/lowershingmun_3.jpg" alt="下城門水塘主壩" loading="lazy"><figcaption>主壩景色</figcaption></figure>
+      </div>
+      <div class="info">
+        <div class="info-block"><h3>泊車/落腳</h3><p>建議泊大圍或美田一帶合法停車場，再的士到 Lower Shing Mun Road 或附近入口。</p></div>
+        <div class="info-block"><h3>短線走法</h3><p>只看主壩、溢洪口、附近水塘路，不接長線上城門水塘。</p></div>
+        <div class="info-block"><h3>時間/距離</h3><p>港鐵入門路線資料把下城門水塘主壩列為約2.7公里、約39分鐘；由停車點起計預留1至1.5小時。</p></div>
+        <div class="info-block"><h3>景觀</h3><p>水壩、圓形溢洪口、沙田山谷、針山和周邊山勢。</p></div>
+        <div class="info-block full"><h3>今日提醒</h3><p>壩頂和開揚位會食風；不要站近欄邊，也不建議天黑後走。</p></div>
+      </div>
+      <div class="source-row">資料/圖片：<a href="https://www.mtr.com.hk/en/customer/main/joyyou-easy-hiking-trails.html">港鐵 Easy Hiking Trails</a><a href="https://commons.wikimedia.org/wiki/Category:Lower_Shing_Mun_Reservoir_Bellmouth_Overflow">Wikimedia Commons</a></div>
+    </article>
+
+    <article class="card">
+      <div class="card-head">
+        <div>
+          <div class="card-kicker">09｜大棠林道</div>
+          <h2>大棠 / 大欖郊野公園 Tai Tong / Tai Lam Country Park</h2>
+        </div>
+        <div class="score"><strong>3.5/5</strong>短走可以</div>
+      </div>
+      <div class="photo-grid">
+        <figure><img src="hiking_report_assets/tailam_1.jpg" alt="大欖郊野公園景色" loading="lazy"><figcaption>大欖郊野公園</figcaption></figure>
+        <figure><img src="hiking_report_assets/tailam_2.jpg" alt="大欖郊野公園林道" loading="lazy"><figcaption>郊野林道</figcaption></figure>
+        <figure><img src="hiking_report_assets/tailam_3.jpg" alt="大欖郊野公園水塘遠景" loading="lazy"><figcaption>山谷與水塘</figcaption></figure>
+      </div>
+      <div class="info">
+        <div class="info-block"><h3>泊車/落腳</h3><p>導航 Tai Tong Shan Road Car Park 或大棠燒烤場一帶。周日路窄車多，要預留等位時間。</p></div>
+        <div class="info-block"><h3>短線走法</h3><p>由大棠入口走到楓香林/林道一段，約1至1.5小時折返。</p></div>
+        <div class="info-block"><h3>時間/距離</h3><p>官方完整路線約11.5公里、約4小時；今日不做全程，也不硬上開揚觀景位。</p></div>
+        <div class="info-block"><h3>景觀</h3><p>林道、山谷、楓香樹；非紅葉季也有舒服郊遊感。</p></div>
+        <div class="info-block full"><h3>今日提醒</h3><p>千島湖觀景位較開揚，若風勢明顯就不要加程；雨後泥路和斜路慢行。</p></div>
+      </div>
+      <div class="source-row">資料/圖片：<a href="https://www.discoverhongkong.com/eng/place-to-go/travel.guide-tai-lam-country-park.html">香港旅發局</a></div>
+    </article>
+
+    <article class="card">
+      <div class="card-head">
+        <div>
+          <div class="card-kicker">10｜城市夜景候補</div>
+          <h2>寶馬山紅香爐峰 Red Incense Burner Summit</h2>
+        </div>
+        <div class="score"><strong>3/5</strong>景極靚但今日風大</div>
+      </div>
+      <div class="photo-grid">
+        <figure><img src="hiking_report_assets/redincense_1.jpg" alt="紅香爐峰維港景色" loading="lazy"><figcaption>維港全景</figcaption></figure>
+        <figure><img src="hiking_report_assets/redincense_2.jpg" alt="紅香爐峰日景" loading="lazy"><figcaption>城市景觀</figcaption></figure>
+        <figure><img src="hiking_report_assets/redincense_3.jpg" alt="紅香爐峰夜景" loading="lazy"><figcaption>黃昏/夜景</figcaption></figure>
+      </div>
+      <div class="info">
+        <div class="info-block"><h3>泊車/落腳</h3><p>導航 St. Joan of Arc Secondary School 或寶馬山巴士總站附近；正式車位少，最好合法停車或的士上落。</p></div>
+        <div class="info-block"><h3>短線走法</h3><p>由聖貞德中學旁路徑接金督馳馬徑，到安全觀景位即可折返。</p></div>
+        <div class="info-block"><h3>時間/距離</h3><p>短線約10至30分鐘到景位，但最後有石位，今日不要爬石或站邊。</p></div>
+        <div class="info-block"><h3>景觀</h3><p>維港兩岸、銅鑼灣、中環、九龍，是最出名的短線城市景之一。</p></div>
+        <div class="info-block full"><h3>今日提醒</h3><p>今日高地強風，這點只作候補；到場感到風大就即走，轉山頂盧吉道或香港仔水塘。</p></div>
+      </div>
+      <div class="source-row">資料/圖片：<a href="https://www.gohk.gov.hk/en/spots/spot_detail.php?spot=Red+Incense+Burner+Summit">政府18區</a></div>
+    </article>
+
+    <section class="footer">
+      <p><strong>即日決策：</strong>今日最穩是山頂盧吉道、香港仔水塘、鶴藪水塘、新娘潭。若同行有小朋友或長者，優先山頂/香港仔/鶴藪；若想影相，優先新娘潭/流水響/城門水塘短段。</p>
+      <p><strong>天氣資料：</strong><a href="https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=rhrread&lang=tc">天文台現時天氣</a>、<a href="https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=flw&lang=tc">本港天氣預測</a>、<a href="https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=warnsum&lang=tc">警告摘要</a>、<a href="https://www.hko.gov.hk/en/103461/Hong-Kong-Hiking-Trail-Weather-Service">行山天氣服務</a>。</p>
+      <p>相片已保存於本機資料夾 <strong>hiking_report_assets</strong>，所以即使聊天框不顯示遠端圖片，打開本頁也應該可見完整圖文。</p>
+    </section>
+  </main>
+</body>
+</html>
