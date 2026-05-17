@@ -31,6 +31,10 @@
       line-height: 1.65;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     a {
       color: var(--accent);
       text-decoration-thickness: 1px;
@@ -82,9 +86,73 @@
     }
 
     main {
-      width: min(1180px, calc(100% - 36px));
+      width: min(1320px, calc(100% - 36px));
       margin: 0 auto;
       padding: 30px 0 56px;
+      display: grid;
+      grid-template-columns: 270px minmax(0, 1fr);
+      gap: 22px;
+      align-items: start;
+    }
+
+    .content-flow {
+      min-width: 0;
+    }
+
+    .side-nav {
+      position: sticky;
+      top: 16px;
+      max-height: calc(100vh - 32px);
+      overflow: auto;
+      padding: 16px;
+      background: rgba(255, 255, 255, 0.95);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+
+    .side-nav h2 {
+      margin: 0 0 6px;
+      font-size: 19px;
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+
+    .side-nav p {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .nav-group {
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px solid var(--line);
+    }
+
+    .nav-group-title {
+      color: var(--accent-2);
+      font-size: 13px;
+      font-weight: 900;
+      margin-bottom: 8px;
+    }
+
+    .side-nav a {
+      display: block;
+      color: var(--ink);
+      text-decoration: none;
+      padding: 8px 9px;
+      border-radius: 6px;
+      font-size: 14px;
+      line-height: 1.25;
+    }
+
+    .side-nav a:hover,
+    .side-nav a:focus {
+      color: var(--accent);
+      background: var(--soft);
+      outline: none;
     }
 
     .notice-grid {
@@ -185,6 +253,7 @@
     .card {
       overflow: hidden;
       margin: 0 0 28px;
+      scroll-margin-top: 20px;
     }
 
     .card-head {
@@ -312,6 +381,49 @@
         min-height: 420px;
       }
 
+      main {
+        display: block;
+        width: min(100% - 24px, 1180px);
+      }
+
+      .side-nav {
+        position: sticky;
+        top: 0;
+        z-index: 4;
+        max-height: none;
+        overflow-x: auto;
+        overflow-y: hidden;
+        margin: -6px 0 18px;
+        padding: 12px;
+      }
+
+      .side-nav p {
+        display: none;
+      }
+
+      .side-nav nav,
+      .nav-group {
+        display: flex;
+        gap: 8px;
+      }
+
+      .nav-group {
+        margin-top: 0;
+        padding-top: 0;
+        border-top: 0;
+      }
+
+      .nav-group-title {
+        flex: 0 0 auto;
+        margin: 8px 2px 0 0;
+      }
+
+      .side-nav a {
+        flex: 0 0 auto;
+        border: 1px solid var(--line);
+        background: #fff;
+      }
+
       .notice-grid,
       .info,
       .card-head {
@@ -365,12 +477,46 @@
   <header>
     <div class="hero-inner">
       <div class="eyebrow">2026年5月17日 星期日｜香港短途靚景行山</div>
-      <h1>今日可駕車到附近、短時間完成、又有真風景的10個選擇</h1>
-      <p class="hero-copy">按今日天氣，我把高風險開揚山脊剔走，優先選水塘、林蔭、平路、容易折返的路線。每個地點下面都有至少3張已下載到本機的真實相片。</p>
+      <h1>今日可駕車到附近、短時間完成、又有真風景的20個選擇</h1>
+      <p class="hero-copy">按今日天氣，我把高風險開揚山脊剔走，優先選水塘、林蔭、平路、容易折返的路線。每個地點下面都有至少3張真實相片，左方目錄可直接跳到想看的地方。</p>
     </div>
   </header>
 
   <main>
+    <aside class="side-nav" aria-label="地點目錄">
+      <h2>看到甚麼地方</h2>
+      <p>點按地名即可跳到該區；上半是全港短線，下半是屯門出發40分鐘內短線。</p>
+      <nav>
+        <div class="nav-group">
+          <div class="nav-group-title">今日全港短線</div>
+          <a href="#place-peak">01 山頂盧吉道</a>
+          <a href="#place-bride">02 新娘潭</a>
+          <a href="#place-hoktau">03 鶴藪水塘</a>
+          <a href="#place-lau">04 流水響水塘</a>
+          <a href="#place-aberdeen">05 香港仔水塘</a>
+          <a href="#place-taitam">06 大潭水塘群</a>
+          <a href="#place-shingmun">07 城門水塘</a>
+          <a href="#place-lowershingmun">08 下城門水塘</a>
+          <a href="#place-tailam">09 大棠/大欖</a>
+          <a href="#place-redincense">10 紅香爐峰</a>
+        </div>
+        <div class="nav-group">
+          <div class="nav-group-title">屯門出發短線</div>
+          <a href="#place-tmtrail">11 屯門徑彩虹欄杆</a>
+          <a href="#place-castlebay">12 青山灣海濱長廊</a>
+          <a href="#place-goldcoast">13 黃金海岸</a>
+          <a href="#place-samshing">14 三聖墟</a>
+          <a href="#place-tsingshan">15 青山禪院</a>
+          <a href="#place-lungkwutan">16 龍鼓灘</a>
+          <a href="#place-paknai">17 白泥</a>
+          <a href="#place-namsangwai">18 南生圍</a>
+          <a href="#place-wetland">19 香港濕地公園</a>
+          <a href="#place-tsimbeitsui">20 尖鼻咀</a>
+        </div>
+      </nav>
+    </aside>
+
+    <div class="content-flow">
     <section class="notice-grid">
       <div class="notice">
         <h2>今日天氣判斷</h2>
@@ -407,7 +553,7 @@
       <button class="print-button" onclick="window.print()">列印 / 另存PDF</button>
     </div>
 
-    <article class="card">
+    <article class="card" id="place-peak">
       <div class="card-head">
         <div>
           <div class="card-kicker">01｜最高推薦</div>
@@ -430,7 +576,7 @@
       <div class="source-row">資料/圖片：<a href="https://www.discoverhongkong.com/eng/place-to-go/travel.guide-peak-circle-walk.html">香港旅發局</a><a href="https://www.hanglungmalls.com/en/parking?mall=peak-galleria">Peak Galleria 停車資訊</a></div>
     </article>
 
-    <article class="card">
+    <article class="card" id="place-bride">
       <div class="card-head">
         <div>
           <div class="card-kicker">02｜雨後瀑布</div>
@@ -453,7 +599,7 @@
       <div class="source-row">資料/圖片：<a href="https://www.discoverhongkong.com/eng/place-to-go/travel.guide-bride-s-pool.html">香港旅發局</a></div>
     </article>
 
-    <article class="card">
+    <article class="card" id="place-hoktau">
       <div class="card-head">
         <div>
           <div class="card-kicker">03｜林蔭水塘</div>
@@ -476,7 +622,7 @@
       <div class="source-row">資料/圖片：<a href="https://www.gohk.gov.hk/en/spots/spot_detail.php?spot=Hok+Tau+Reservoir">政府18區</a></div>
     </article>
 
-    <article class="card">
+    <article class="card" id="place-lau">
       <div class="card-head">
         <div>
           <div class="card-kicker">04｜天空之鏡</div>
@@ -499,7 +645,7 @@
       <div class="source-row">資料/圖片：<a href="https://www.discoverhongkong.com/eng/place-to-go/travel.guide-lau-shui-heung-reservoir.html">香港旅發局</a></div>
     </article>
 
-    <article class="card">
+    <article class="card" id="place-aberdeen">
       <div class="card-head">
         <div>
           <div class="card-kicker">05｜近市區水塘</div>
@@ -522,7 +668,7 @@
       <div class="source-row">資料/圖片：<a href="https://www.afcd.gov.hk/english/country/cou_vis/cou_vis_cou/cou_vis_cou_abe/cou_vis_cou_abe.html">漁護署</a><a href="https://www.gohk.gov.hk/en/spots/spot_detail.php?spot=Aberdeen+Country+Park+and+Aberdeen+Reservoir">政府18區</a></div>
     </article>
 
-    <article class="card">
+    <article class="card" id="place-taitam">
       <div class="card-head">
         <div>
           <div class="card-kicker">06｜歷史水務建築</div>
@@ -545,7 +691,7 @@
       <div class="source-row">資料/圖片：<a href="https://www.gohk.gov.hk/en/spots/spot_detail.php?spot=Tai+Tam+Country+Park">政府18區</a></div>
     </article>
 
-    <article class="card">
+    <article class="card" id="place-shingmun">
       <div class="card-head">
         <div>
           <div class="card-kicker">07｜白千層林</div>
@@ -568,7 +714,7 @@
       <div class="source-row">資料/圖片：<a href="https://www.discoverhongkong.com/eng/place-to-go/travel.guide-shing-mun-reservoir.html">香港旅發局</a></div>
     </article>
 
-    <article class="card">
+    <article class="card" id="place-lowershingmun">
       <div class="card-head">
         <div>
           <div class="card-kicker">08｜主壩與溢洪口</div>
@@ -591,7 +737,7 @@
       <div class="source-row">資料/圖片：<a href="https://www.mtr.com.hk/en/customer/main/joyyou-easy-hiking-trails.html">港鐵 Easy Hiking Trails</a><a href="https://commons.wikimedia.org/wiki/Category:Lower_Shing_Mun_Reservoir_Bellmouth_Overflow">Wikimedia Commons</a></div>
     </article>
 
-    <article class="card">
+    <article class="card" id="place-tailam">
       <div class="card-head">
         <div>
           <div class="card-kicker">09｜大棠林道</div>
@@ -614,7 +760,7 @@
       <div class="source-row">資料/圖片：<a href="https://www.discoverhongkong.com/eng/place-to-go/travel.guide-tai-lam-country-park.html">香港旅發局</a></div>
     </article>
 
-    <article class="card">
+    <article class="card" id="place-redincense">
       <div class="card-head">
         <div>
           <div class="card-kicker">10｜城市夜景候補</div>
@@ -654,7 +800,7 @@
       </div>
     </section>
 
-    <article class="card">
+    <article class="card" id="place-tmtrail">
       <div class="card-head">
         <div>
           <div class="card-kicker">11｜屯門市區最近山景</div>
@@ -677,7 +823,7 @@
       <div class="source-row">資料/圖片：<a href="https://www.gohk.gov.hk/en/spots/spot_detail.php?spot=Tuen+Mun+Trail">政府18區 Tuen Mun Trail</a></div>
     </article>
 
-    <article class="card">
+    <article class="card" id="place-castlebay">
       <div class="card-head">
         <div>
           <div class="card-kicker">12｜最容易即刻去</div>
@@ -700,7 +846,7 @@
       <div class="source-row">資料/圖片：<a href="https://www.gohk.gov.hk/en/spots/spot_detail.php?spot=Castle+Peak+Bay+Waterfront+Promenade">政府18區 Castle Peak Bay Waterfront Promenade</a></div>
     </article>
 
-    <article class="card">
+    <article class="card" id="place-goldcoast">
       <div class="card-head">
         <div>
           <div class="card-kicker">13｜海灘日落最穩</div>
@@ -723,7 +869,7 @@
       <div class="source-row">資料/圖片：<a href="https://www.gohk.gov.hk/en/spots/spot_detail.php?spot=Hong+Kong+Gold+Coast">政府18區 Hong Kong Gold Coast</a></div>
     </article>
 
-    <article class="card">
+    <article class="card" id="place-samshing">
       <div class="card-head">
         <div>
           <div class="card-kicker">14｜漁港味道</div>
@@ -746,7 +892,7 @@
       <div class="source-row">資料/圖片：<a href="https://www.gohk.gov.hk/en/spots/spot_detail.php?spot=Sam+Shing+Hui">政府18區 Sam Shing Hui</a></div>
     </article>
 
-    <article class="card">
+    <article class="card" id="place-tsingshan">
       <div class="card-head">
         <div>
           <div class="card-kicker">15｜古剎短走</div>
@@ -769,7 +915,7 @@
       <div class="source-row">資料/圖片：<a href="https://www.gohk.gov.hk/en/spots/spot_detail.php?spot=Tsing+Shan+Monastery">政府18區 Tsing Shan Monastery</a><a href="https://commons.wikimedia.org/wiki/Category:Tsing_Shan_Monastery">Wikimedia Commons</a></div>
     </article>
 
-    <article class="card">
+    <article class="card" id="place-lungkwutan">
       <div class="card-head">
         <div>
           <div class="card-kicker">16｜西面海景</div>
@@ -792,7 +938,7 @@
       <div class="source-row">資料/圖片：<a href="https://www.gohk.gov.hk/en/spots/spot_detail.php?spot=Cenotaph+to+commemorate+the+Hero+Group+of+the+War+of+Resistance+Against+Japanese+Aggression+led+by+Liu+Chunxiang">政府18區 Lung Kwu Tan 觀景平台</a></div>
     </article>
 
-    <article class="card">
+    <article class="card" id="place-paknai">
       <div class="card-head">
         <div>
           <div class="card-kicker">17｜日落首選</div>
@@ -815,7 +961,7 @@
       <div class="source-row">資料/圖片：<a href="https://www.gohk.gov.hk/en/spots/spot_detail.php?spot=Pak+Nai">政府18區 Pak Nai</a></div>
     </article>
 
-    <article class="card">
+    <article class="card" id="place-namsangwai">
       <div class="card-head">
         <div>
           <div class="card-kicker">18｜蘆葦河景</div>
@@ -838,7 +984,7 @@
       <div class="source-row">資料/圖片：<a href="https://www.gohk.gov.hk/en/spots/spot_detail.php?spot=Nam+Sang+Wai">政府18區 Nam Sang Wai</a></div>
     </article>
 
-    <article class="card">
+    <article class="card" id="place-wetland">
       <div class="card-head">
         <div>
           <div class="card-kicker">19｜有設施的濕地短走</div>
@@ -861,7 +1007,7 @@
       <div class="source-row">資料/圖片：<a href="https://www.gohk.gov.hk/en/spots/spot_detail.php?spot=Hong+Kong+Wetland+Park">政府18區 Hong Kong Wetland Park</a><a href="https://www.wetlandpark.gov.hk/en/information/hours">官方開放時間</a></div>
     </article>
 
-    <article class="card">
+    <article class="card" id="place-tsimbeitsui">
       <div class="card-head">
         <div>
           <div class="card-kicker">20｜后海灣開揚景</div>
@@ -889,6 +1035,7 @@
       <p><strong>天氣資料：</strong><a href="https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=rhrread&lang=tc">天文台現時天氣</a>、<a href="https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=flw&lang=tc">本港天氣預測</a>、<a href="https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=warnsum&lang=tc">警告摘要</a>、<a href="https://www.hko.gov.hk/en/103461/Hong-Kong-Hiking-Trail-Weather-Service">行山天氣服務</a>。</p>
       <p>相片已保存於本機資料夾 <strong>hiking_report_assets</strong>，所以即使聊天框不顯示遠端圖片，打開本頁也應該可見完整圖文。</p>
     </section>
+    </div>
   </main>
 </body>
 </html>
