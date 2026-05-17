@@ -232,6 +232,50 @@
       padding-left: 3px;
     }
 
+    .route-guide {
+      margin: 0 0 30px;
+      padding: 20px;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    table {
+      width: 100%;
+      min-width: 900px;
+      border-collapse: collapse;
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    th,
+    td {
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      color: #24432f;
+      background: var(--soft);
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    tr:last-child td {
+      border-bottom: 0;
+    }
+
+    td:first-child {
+      font-weight: 800;
+      min-width: 150px;
+    }
+
     .section-title {
       margin: 42px 0 18px;
       display: flex;
@@ -501,7 +545,7 @@
   <header>
     <div class="hero-inner">
       <div class="eyebrow">2026年5月17日 星期日｜香港短途靚景行山</div>
-      <h1>今日可駕車到附近、短時間完成、又有真風景的20個選擇</h1>
+      <h1>今日可駕車到附近、短時間完成、又有真風景的30個選擇</h1>
       <p class="hero-copy">按今日天氣，我把高風險開揚山脊剔走，優先選水塘、林蔭、平路、容易折返的路線。每個地點下面都有至少3張真實相片，左方目錄可直接跳到想看的地方。</p>
     </div>
   </header>
@@ -509,7 +553,7 @@
   <main>
     <aside class="side-nav" aria-label="地點目錄">
       <h2>看到甚麼地方</h2>
-      <p>點按地名即可跳到該區；上半是全港短線，下半是屯門出發40分鐘內短線。</p>
+      <p>點按地名即可跳到該區；已分成全港短線、屯門出發短線、九龍快到短線。</p>
       <nav>
         <div class="nav-group">
           <div class="nav-group-title">今日全港短線</div>
@@ -536,6 +580,19 @@
           <a href="#place-namsangwai">18 南生圍</a>
           <a href="#place-wetland">19 香港濕地公園</a>
           <a href="#place-tsimbeitsui">20 尖鼻咀</a>
+        </div>
+        <div class="nav-group">
+          <div class="nav-group-title">九龍快到短線</div>
+          <a href="#place-gardenhill">21 嘉頓山</a>
+          <a href="#place-checkerboard">22 格仔山</a>
+          <a href="#place-devilspeak">23 魔鬼山短線</a>
+          <a href="#place-leiyuemun">24 鯉魚門</a>
+          <a href="#place-kwuntong">25 觀塘海濱</a>
+          <a href="#place-kaitak">26 啟德郵輪碼頭</a>
+          <a href="#place-chilin">27 志蓮/南蓮</a>
+          <a href="#place-walledcity">28 九龍寨城公園</a>
+          <a href="#place-westkowloon">29 西九文化區</a>
+          <a href="#place-hoisham">30 海心公園</a>
         </div>
       </nav>
     </aside>
@@ -569,6 +626,55 @@
           <li>大棠短段</li>
           <li>紅香爐峰</li>
         </ol>
+      </div>
+    </section>
+
+    <section class="notice route-guide">
+      <h2>30個地點入口/泊車/短線速查</h2>
+      <p>以下以「導航點 → 入口 → 今天短線版本」整理。車程只作屯門出發的保守估算，出門前仍要用即時導航；若現場泊車不順，優先轉去有商場/公園停車場的選項。</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>地點</th>
+              <th>導航/泊車</th>
+              <th>入口路線</th>
+              <th>短線時間</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><a href="#place-peak">01 山頂盧吉道</a></td><td>The Peak Galleria, 118 Peak Road</td><td>由山頂廣場/凌霄閣旁入盧吉道，去維港觀景位後折返。</td><td>30-60分鐘</td></tr>
+            <tr><td><a href="#place-bride">02 新娘潭</a></td><td>Bride’s Pool Car Park</td><td>停車場旁入自然教育徑，看石橋、新娘潭、照鏡潭後折返。</td><td>45-60分鐘</td></tr>
+            <tr><td><a href="#place-hoktau">03 鶴藪水塘</a></td><td>Hok Tau Reservoir / Hok Tau Road</td><td>由水塘家樂徑入口繞水塘短圈，不上高位。</td><td>約60分鐘</td></tr>
+            <tr><td><a href="#place-lau">04 流水響水塘</a></td><td>Lau Shui Heung Reservoir</td><td>由流水響路入水塘邊，只走倒影位、水壩、林道精華段。</td><td>45-75分鐘</td></tr>
+            <tr><td><a href="#place-aberdeen">05 香港仔水塘</a></td><td>香港仔市區泊車，再到 Aberdeen Reservoir Road</td><td>由香港仔水塘道入口上，行下水塘壩及自然教育徑一段。</td><td>60-90分鐘</td></tr>
+            <tr><td><a href="#place-taitam">06 大潭水塘群</a></td><td>黃泥涌峽/陽明山莊一帶合法泊車</td><td>由 Tai Tam Reservoir Road 入，只走古橋、水壩、水塘路短段。</td><td>60-90分鐘</td></tr>
+            <tr><td><a href="#place-shingmun">07 城門水塘</a></td><td>Pineapple Dam / 菠蘿壩</td><td>由菠蘿壩入白千層林和水塘邊，原路折返。</td><td>60-90分鐘</td></tr>
+            <tr><td><a href="#place-lowershingmun">08 下城門水塘</a></td><td>大圍/美田泊車，再到 Lower Shing Mun Road</td><td>只看下城門水塘主壩、溢洪口和附近水塘路。</td><td>45-90分鐘</td></tr>
+            <tr><td><a href="#place-tailam">09 大棠/大欖</a></td><td>Tai Tong Shan Road Car Park</td><td>由大棠入口走楓香林/林道一段，今日不硬上開揚觀景位。</td><td>60-90分鐘</td></tr>
+            <tr><td><a href="#place-redincense">10 紅香爐峰</a></td><td>St. Joan of Arc Secondary School 附近合法上落</td><td>接金督馳馬徑到安全觀景位，不爬石、不久留。</td><td>30-60分鐘</td></tr>
+            <tr><td><a href="#place-tmtrail">11 屯門徑彩虹欄杆</a></td><td>屯門市中心/V city/屯門站泊車</td><td>由何福堂書院旁樓梯上引水道，再入屯門徑到彩虹欄杆。</td><td>60-90分鐘</td></tr>
+            <tr><td><a href="#place-castlebay">12 青山灣海濱</a></td><td>Castle Peak Bay Waterfront Promenade / 三聖一帶</td><td>沿海濱長廊來回，可接三聖墟短走。</td><td>30-50分鐘</td></tr>
+            <tr><td><a href="#place-goldcoast">13 黃金海岸</a></td><td>Hong Kong Gold Coast / Golden Beach</td><td>由商場、Dolphin Square、黃金泳灘、咖啡灣方向短走。</td><td>45-75分鐘</td></tr>
+            <tr><td><a href="#place-samshing">14 三聖墟</a></td><td>Sam Shing Hui / Sam Shing Seafood Market</td><td>海鮮市場、三聖廟、青山灣邊短走。</td><td>45-75分鐘</td></tr>
+            <tr><td><a href="#place-tsingshan">15 青山禪院</a></td><td>Tsing Shan Monastery Path</td><td>只遊青山禪院和低位山腰路段，不登青山頂。</td><td>45-75分鐘</td></tr>
+            <tr><td><a href="#place-lungkwutan">16 龍鼓灘</a></td><td>Lung Kwu Tan Chinese White Dolphin Lookout</td><td>觀景台、紀念碑平台、附近海邊安全位置短走。</td><td>30-60分鐘</td></tr>
+            <tr><td><a href="#place-paknai">17 白泥</a></td><td>Ha Pak Nai</td><td>村路和岸邊短走，看紅樹、泥灘、日落；不入泥灘深處。</td><td>30-60分鐘</td></tr>
+            <tr><td><a href="#place-namsangwai">18 南生圍</a></td><td>Nam Sang Wai Road</td><td>只走河邊、蘆葦、木橋附近精華段，不做完整環迴。</td><td>60-90分鐘</td></tr>
+            <tr><td><a href="#place-wetland">19 香港濕地公園</a></td><td>Hong Kong Wetland Park, Wetland Park Road</td><td>訪客中心、溪畔漫遊徑、紅樹林浮橋、觀鳥屋短線。</td><td>60-90分鐘</td></tr>
+            <tr><td><a href="#place-tsimbeitsui">20 尖鼻咀</a></td><td>Tsim Bei Tsui</td><td>沿堤岸和安全路段短走，看后海灣、紅樹和深圳灣方向。</td><td>45-75分鐘</td></tr>
+            <tr><td><a href="#place-gardenhill">21 嘉頓山</a></td><td>Mei Ho House / Shek Kip Mei，泊深水埗或石硤尾合法車場</td><td>由美荷樓/白田街一帶樓梯上嘉頓山觀景位，原路返。</td><td>30-60分鐘</td></tr>
+            <tr><td><a href="#place-checkerboard">22 格仔山</a></td><td>Lok Fu Place / Lok Fu Park</td><td>由樂富廣場步往富安街、樂富配水庫休憩花園，短上格仔山。</td><td>45-75分鐘</td></tr>
+            <tr><td><a href="#place-devilspeak">23 魔鬼山短線</a></td><td>大本型/油塘泊車，入口近高超道或衛奕信徑第三段</td><td>只走魔鬼山炮台/觀景位短段，不接長線去井欄樹。</td><td>60-90分鐘</td></tr>
+            <tr><td><a href="#place-leiyuemun">24 鯉魚門</a></td><td>Sam Ka Tsuen / Lei Yue Mun</td><td>由三家村碼頭、海鮮街、海濱及燈塔方向短走。</td><td>45-75分鐘</td></tr>
+            <tr><td><a href="#place-kwuntong">25 觀塘海濱</a></td><td>Hoi Bun Road / Kwun Tong Promenade</td><td>由海濱花園入口沿約1公里木板道來回，看啟德和維港東。</td><td>45-75分鐘</td></tr>
+            <tr><td><a href="#place-kaitak">26 啟德郵輪碼頭</a></td><td>Kai Tak Cruise Terminal</td><td>泊碼頭停車場，乘升降機到天台公園及海旁平台短走。</td><td>45-75分鐘</td></tr>
+            <tr><td><a href="#place-chilin">27 志蓮/南蓮</a></td><td>Plaza Hollywood 泊車，步行到 Chi Lin Road / Fung Tak Road</td><td>由南蓮園池入口入，接志蓮淨苑外圍園景短走。</td><td>60-90分鐘</td></tr>
+            <tr><td><a href="#place-walledcity">28 九龍寨城公園</a></td><td>Kowloon City Plaza / Carpenter Road Park 一帶泊車</td><td>由東正道或賈炳達道入口入，走衙門、南門遺跡、四季園。</td><td>45-75分鐘</td></tr>
+            <tr><td><a href="#place-westkowloon">29 西九文化區</a></td><td>Art Park / HK Palace Museum / Elements 停車場</td><td>由藝術公園入海濱長廊，走 M+、故宮博物館外圍和海邊。</td><td>60-90分鐘</td></tr>
+            <tr><td><a href="#place-hoisham">30 海心公園</a></td><td>Hoi Sham Park / To Kwa Wan Road 一帶泊車</td><td>由海心公園入口入，走魚尾石、海邊平台、土瓜灣海濱。</td><td>30-60分鐘</td></tr>
+          </tbody>
+        </table>
       </div>
     </section>
 
@@ -1054,8 +1160,244 @@
       <div class="source-row">資料/圖片：<a href="https://www.gohk.gov.hk/en/spots/spot_detail.php?spot=Tsim+Bei+Tsui">政府18區 Tsim Bei Tsui</a><a href="https://commons.wikimedia.org/wiki/File:Tsim_Bei_Tsui_201707.jpg">Wikimedia Commons</a></div>
     </article>
 
+    <div class="section-title">
+      <h2>駕車去九龍也快：10個90分鐘內靚景</h2>
+      <span>城市山景、海濱、園景，今日風大時比山脊更穩</span>
+    </div>
+
+    <section class="notice">
+      <h2>九龍短線使用方法</h2>
+      <p>以下由屯門出發通常可在約25至45分鐘車程範圍內到達，但周日、雨天和過海/市區塞車會波動。今日仍有強烈季候風信號，所以魔鬼山、格仔山、嘉頓山只建議短上短落；其餘海濱和公園線最穩陣。</p>
+      <div class="badges">
+        <span class="badge">全程30-90分鐘</span>
+        <span class="badge">多數有停車場/商場泊車</span>
+        <span class="badge warn">山邊樓梯濕滑</span>
+        <span class="badge warn">海濱有風</span>
+      </div>
+    </section>
+
+    <article class="card" id="place-gardenhill">
+      <div class="card-head">
+        <div>
+          <div class="card-kicker">21｜深水埗城市夜景</div>
+          <h2>嘉頓山 Garden Hill</h2>
+        </div>
+        <div class="score"><strong>約30-40分鐘車程</strong>步行30-60分鐘</div>
+      </div>
+      <div class="photo-grid">
+        <figure><img src="hiking_report_assets/gardenhill_1.jpg" alt="嘉頓山城市景" loading="lazy"><figcaption>嘉頓山城市景</figcaption></figure>
+        <figure><img src="hiking_report_assets/gardenhill_2.jpg" alt="嘉頓山樓梯入口" loading="lazy"><figcaption>樓梯上山</figcaption></figure>
+        <figure><img src="hiking_report_assets/gardenhill_3.jpg" alt="嘉頓山夜景" loading="lazy"><figcaption>深水埗夜景</figcaption></figure>
+      </div>
+      <div class="info">
+        <div class="info-block"><h3>泊車/入口</h3><p>導航 Mei Ho House 或 Shek Kip Mei。泊深水埗/石硤尾合法停車場，由美荷樓、白田街或附近樓梯上觀景位。</p></div>
+        <div class="info-block"><h3>官方/真實資料</h3><p>旅發局列明嘉頓山約90米高，由深水埗港鐵站步行約15分鐘可到山腳，是攝影熱門觀景點。</p></div>
+        <div class="info-block"><h3>短線走法</h3><p>上樓梯到開揚平台，看深水埗、旺角、石硤尾城市景，原路落山。</p></div>
+        <div class="info-block"><h3>今日提醒</h3><p>樓梯濕滑，日落後人多；不要坐邊位，不要留到太夜。</p></div>
+      </div>
+      <div class="source-row">資料/圖片：<a href="https://www.discoverhongkong.com/eng/place-to-go/travel.guide-garden-hill.html">香港旅發局 Garden Hill</a></div>
+    </article>
+
+    <article class="card" id="place-checkerboard">
+      <div class="card-head">
+        <div>
+          <div class="card-kicker">22｜啟德舊航道記憶</div>
+          <h2>格仔山 Checkerboard Hill</h2>
+        </div>
+        <div class="score"><strong>約30-40分鐘車程</strong>步行45-75分鐘</div>
+      </div>
+      <div class="photo-grid">
+        <figure><img src="hiking_report_assets/checkerboard_1.jpg" alt="格仔山新油漆格仔" loading="lazy"><figcaption>格仔山地標</figcaption></figure>
+        <figure><img src="hiking_report_assets/checkerboard_2.jpg" alt="格仔山遠景" loading="lazy"><figcaption>九龍仔山景</figcaption></figure>
+        <figure><img src="hiking_report_assets/checkerboard_3.jpg" alt="格仔山城市景" loading="lazy"><figcaption>城市與舊啟德記憶</figcaption></figure>
+      </div>
+      <div class="info">
+        <div class="info-block"><h3>泊車/入口</h3><p>泊 Lok Fu Place，步行往 Lok Fu Park、Fu On Street、Lok Fu Service Reservoir Rest Garden 一帶上山。</p></div>
+        <div class="info-block"><h3>真實資料</h3><p>Wikimedia Commons 將 Checkerboard Hill 標示為九龍城區山丘，海拔約98米，位置在樂富/九龍仔一帶。</p></div>
+        <div class="info-block"><h3>短線走法</h3><p>只到格仔牆和附近觀景位影相，原路折返，不接長線往獅子山方向。</p></div>
+        <div class="info-block"><h3>今日提醒</h3><p>最後一段有斜路和樓梯；雨後慢行。這點適合短拍，不適合大風天久留。</p></div>
+      </div>
+      <div class="source-row">資料/圖片：<a href="https://commons.wikimedia.org/wiki/Category:Checkerboard_Hill">Wikimedia Commons Checkerboard Hill</a><a href="https://en.wikipedia.org/wiki/Checkerboard_Hill">Checkerboard Hill 地點資料</a></div>
+    </article>
+
+    <article class="card" id="place-devilspeak">
+      <div class="card-head">
+        <div>
+          <div class="card-kicker">23｜維港東入口山景</div>
+          <h2>魔鬼山短線 Devil’s Peak / Wilson Trail Kwun Tong</h2>
+        </div>
+        <div class="score"><strong>約35-45分鐘車程</strong>步行60-90分鐘</div>
+      </div>
+      <div class="photo-grid">
+        <figure><img src="hiking_report_assets/devilspeak_1.jpg" alt="魔鬼山衛奕信徑景色" loading="lazy"><figcaption>衛奕信徑第三段</figcaption></figure>
+        <figure><img src="hiking_report_assets/devilspeak_2.jpg" alt="魔鬼山海景" loading="lazy"><figcaption>維港東與將軍澳景</figcaption></figure>
+        <figure><img src="hiking_report_assets/devilspeak_3.jpg" alt="魔鬼山山徑" loading="lazy"><figcaption>山徑和炮台方向</figcaption></figure>
+      </div>
+      <div class="info">
+        <div class="info-block"><h3>泊車/入口</h3><p>泊大本型或油塘一帶，步行到高超道/衛奕信徑第三段入口；也可的士到近入口位置再行。</p></div>
+        <div class="info-block"><h3>官方/真實資料</h3><p>政府18區資料指衛奕信徑觀塘段由藍田開始，經魔鬼山、五桂山、馬游塘至井欄樹，可看將軍澳及維港景觀。</p></div>
+        <div class="info-block"><h3>短線走法</h3><p>今日只走魔鬼山炮台/觀景位一小段，看到景就折返，不接完整衛奕信徑長線。</p></div>
+        <div class="info-block"><h3>今日提醒</h3><p>山位當風，若高處風勢強就不要上炮台；改去鯉魚門或觀塘海濱。</p></div>
+      </div>
+      <div class="source-row">資料/圖片：<a href="https://www.gohk.gov.hk/en/spots/spot_detail.php?spot=Wilson+Trail+%28Kwun+Tong+sections%29">政府18區 Wilson Trail Kwun Tong sections</a></div>
+    </article>
+
+    <article class="card" id="place-leiyuemun">
+      <div class="card-head">
+        <div>
+          <div class="card-kicker">24｜漁村海峽景</div>
+          <h2>鯉魚門 Lei Yue Mun</h2>
+        </div>
+        <div class="score"><strong>約35-45分鐘車程</strong>步行45-75分鐘</div>
+      </div>
+      <div class="photo-grid">
+        <figure><img src="hiking_report_assets/leiyuemun_1.jpg" alt="鯉魚門海濱" loading="lazy"><figcaption>鯉魚門海濱</figcaption></figure>
+        <figure><img src="hiking_report_assets/leiyuemun_2.jpg" alt="鯉魚門漁村" loading="lazy"><figcaption>漁村街道</figcaption></figure>
+        <figure><img src="hiking_report_assets/leiyuemun_3.jpg" alt="鯉魚門海景" loading="lazy"><figcaption>海峽景色</figcaption></figure>
+      </div>
+      <div class="info">
+        <div class="info-block"><h3>泊車/入口</h3><p>導航 Sam Ka Tsuen 或 Lei Yue Mun。泊三家村/油塘合法停車場，由三家村碼頭、海鮮街入海濱。</p></div>
+        <div class="info-block"><h3>官方/真實資料</h3><p>政府18區將鯉魚門列為觀塘區景點，頁面提供多張鯉魚門海濱及村落相片。</p></div>
+        <div class="info-block"><h3>短線走法</h3><p>三家村碼頭、鯉魚門海鮮街、海濱、燈塔方向短走，原路回到食肆區。</p></div>
+        <div class="info-block"><h3>今日提醒</h3><p>海邊有風，岸邊石級濕滑；這條比魔鬼山更穩陣。</p></div>
+      </div>
+      <div class="source-row">資料/圖片：<a href="https://www.gohk.gov.hk/en/spots/spot_detail.php?spot=Lei+Yue+Mun">政府18區 Lei Yue Mun</a></div>
+    </article>
+
+    <article class="card" id="place-kwuntong">
+      <div class="card-head">
+        <div>
+          <div class="card-kicker">25｜維港東海濱</div>
+          <h2>觀塘海濱花園 Kwun Tong Promenade</h2>
+        </div>
+        <div class="score"><strong>約35-45分鐘車程</strong>步行45-75分鐘</div>
+      </div>
+      <div class="photo-grid">
+        <figure><img src="hiking_report_assets/kwuntong_1.jpg" alt="觀塘海濱花園" loading="lazy"><figcaption>觀塘海濱</figcaption></figure>
+        <figure><img src="hiking_report_assets/kwuntong_2.jpg" alt="觀塘海濱夜景" loading="lazy"><figcaption>海濱夜景</figcaption></figure>
+        <figure><img src="hiking_report_assets/kwuntong_3.jpg" alt="觀塘海濱木板道" loading="lazy"><figcaption>木板道</figcaption></figure>
+      </div>
+      <div class="info">
+        <div class="info-block"><h3>泊車/入口</h3><p>導航 Hoi Bun Road / Kwun Tong Promenade。泊海濱附近商廈、apm 或觀塘合法停車場後步行入場。</p></div>
+        <div class="info-block"><h3>官方/真實資料</h3><p>政府18區資料指觀塘海濱約4公頃，沿約1公里海濱木板道可看啟德郵輪碼頭、跑道公園、港島東及鯉魚門景色。</p></div>
+        <div class="info-block"><h3>短線走法</h3><p>由海濱入口沿木板道來回，想加程才接去茶果嶺/麗港城方向。</p></div>
+        <div class="info-block"><h3>今日提醒</h3><p>風大但撤退容易，適合不想行樓梯的人；音樂噴泉時段需以現場公告為準。</p></div>
+      </div>
+      <div class="source-row">資料/圖片：<a href="https://www.gohk.gov.hk/en/spots/spot_detail.php?spot=Kwun+Tong+Promenade+and+Music+Fountains">政府18區 Kwun Tong Promenade</a></div>
+    </article>
+
+    <article class="card" id="place-kaitak">
+      <div class="card-head">
+        <div>
+          <div class="card-kicker">26｜跑道盡頭海景</div>
+          <h2>啟德郵輪碼頭公園 Kai Tak Cruise Terminal Park</h2>
+        </div>
+        <div class="score"><strong>約35-45分鐘車程</strong>步行45-75分鐘</div>
+      </div>
+      <div class="photo-grid">
+        <figure><img src="hiking_report_assets/kaitak_1.jpg" alt="啟德郵輪碼頭" loading="lazy"><figcaption>啟德郵輪碼頭</figcaption></figure>
+        <figure><img src="hiking_report_assets/kaitak_2.jpg" alt="啟德郵輪碼頭公園" loading="lazy"><figcaption>天台公園</figcaption></figure>
+        <figure><img src="hiking_report_assets/kaitak_3.jpg" alt="啟德維港景色" loading="lazy"><figcaption>維港景色</figcaption></figure>
+      </div>
+      <div class="info">
+        <div class="info-block"><h3>泊車/入口</h3><p>導航 Kai Tak Cruise Terminal。泊碼頭停車場後，乘升降機/扶手電梯上天台公園。</p></div>
+        <div class="info-block"><h3>官方/真實資料</h3><p>政府18區資料指郵輪碼頭位於前啟德機場跑道末端，天台公園約23,000平方米，是大型公共天台花園，可看維港。</p></div>
+        <div class="info-block"><h3>短線走法</h3><p>天台花園一圈，接海旁平台看九龍灣、觀塘、港島東；全程平路為主。</p></div>
+        <div class="info-block"><h3>今日提醒</h3><p>天台公園當風，大風時靠內側行；若落雨可入碼頭室內暫避。</p></div>
+      </div>
+      <div class="source-row">資料/圖片：<a href="https://www.gohk.gov.hk/en/spots/spot_detail.php?spot=Kai+Tak+Cruise+Terminal">政府18區 Kai Tak Cruise Terminal</a></div>
+    </article>
+
+    <article class="card" id="place-chilin">
+      <div class="card-head">
+        <div>
+          <div class="card-kicker">27｜雨天最穩園景</div>
+          <h2>志蓮淨苑 + 南蓮園池 Chi Lin Nunnery & Nan Lian Garden</h2>
+        </div>
+        <div class="score"><strong>約30-40分鐘車程</strong>步行60-90分鐘</div>
+      </div>
+      <div class="photo-grid">
+        <figure><img src="hiking_report_assets/chilin_1.jpg" alt="南蓮園池" loading="lazy"><figcaption>南蓮園池</figcaption></figure>
+        <figure><img src="hiking_report_assets/chilin_2.jpg" alt="志蓮淨苑唐式建築" loading="lazy"><figcaption>唐式建築</figcaption></figure>
+        <figure><img src="hiking_report_assets/chilin_3.jpg" alt="南蓮園池水景" loading="lazy"><figcaption>園林水景</figcaption></figure>
+      </div>
+      <div class="info">
+        <div class="info-block"><h3>泊車/入口</h3><p>泊 Plaza Hollywood，步行到 Chi Lin Road / Fung Tak Road 入口；鑽石山站一帶上落也方便。</p></div>
+        <div class="info-block"><h3>官方/真實資料</h3><p>政府18區資料指南蓮園池佔地約3.5公頃，唐式園林；志蓮淨苑為唐式木構建築群。</p></div>
+        <div class="info-block"><h3>短線走法</h3><p>南蓮園池水景、亭橋、志蓮淨苑外圍園景慢走一圈，不需爬山。</p></div>
+        <div class="info-block"><h3>今日提醒</h3><p>有雨也相對穩陣；園內保持安靜，部分區域可能按現場安排開放。</p></div>
+      </div>
+      <div class="source-row">資料/圖片：<a href="https://www.gohk.gov.hk/en/spots/spot_detail.php?spot=Chi+Lin+Nunnery+%26+Nan+Lian+Garden">政府18區 Chi Lin Nunnery & Nan Lian Garden</a></div>
+    </article>
+
+    <article class="card" id="place-walledcity">
+      <div class="card-head">
+        <div>
+          <div class="card-kicker">28｜歷史園林</div>
+          <h2>九龍寨城公園 Kowloon Walled City Park</h2>
+        </div>
+        <div class="score"><strong>約30-40分鐘車程</strong>步行45-75分鐘</div>
+      </div>
+      <div class="photo-grid">
+        <figure><img src="hiking_report_assets/walledcity_1.jpg" alt="九龍寨城公園" loading="lazy"><figcaption>九龍寨城公園</figcaption></figure>
+        <figure><img src="hiking_report_assets/walledcity_2.jpg" alt="九龍寨城公園歷史建築" loading="lazy"><figcaption>歷史建築</figcaption></figure>
+        <figure><img src="hiking_report_assets/walledcity_3.jpg" alt="九龍寨城公園園景" loading="lazy"><figcaption>園林景色</figcaption></figure>
+      </div>
+      <div class="info">
+        <div class="info-block"><h3>泊車/入口</h3><p>泊 Kowloon City Plaza、賈炳達道公園或九龍城附近合法停車場，由東正道/賈炳達道入口入。</p></div>
+        <div class="info-block"><h3>官方/真實資料</h3><p>旅發局資料指公園位於前九龍寨城原址，約31,000平方米，保留衙門、南門遺跡等歷史元素。</p></div>
+        <div class="info-block"><h3>短線走法</h3><p>南門遺跡、衙門、展覽、四季園、亭台水景慢走一圈。</p></div>
+        <div class="info-block"><h3>今日提醒</h3><p>比山徑穩陣，雨天也可以；若想食嘢，行完可去九龍城。</p></div>
+      </div>
+      <div class="source-row">資料/圖片：<a href="https://www.discoverhongkong.com/eng/place-to-go/travel.guide-kowloon-walled-city-park.html">香港旅發局 Kowloon Walled City Park</a><a href="https://www.gohk.gov.hk/en/spots/spot_detail.php?spot=Kowloon+Walled+City+Park">政府18區</a></div>
+    </article>
+
+    <article class="card" id="place-westkowloon">
+      <div class="card-head">
+        <div>
+          <div class="card-kicker">29｜維港西面大草地</div>
+          <h2>西九文化區 West Kowloon Cultural District</h2>
+        </div>
+        <div class="score"><strong>約25-40分鐘車程</strong>步行60-90分鐘</div>
+      </div>
+      <div class="photo-grid">
+        <figure><img src="hiking_report_assets/westkowloon_1.jpg" alt="西九文化區" loading="lazy"><figcaption>西九文化區</figcaption></figure>
+        <figure><img src="hiking_report_assets/westkowloon_2.jpg" alt="西九文化區海濱" loading="lazy"><figcaption>草地與海濱</figcaption></figure>
+        <figure><img src="hiking_report_assets/westkowloon_3.jpg" alt="西九海濱長廊" loading="lazy"><figcaption>海濱長廊</figcaption></figure>
+      </div>
+      <div class="info">
+        <div class="info-block"><h3>泊車/入口</h3><p>導航 Art Park、Hong Kong Palace Museum 或 Elements 停車場；由藝術公園/故宮博物館一帶入海濱。</p></div>
+        <div class="info-block"><h3>官方/真實資料</h3><p>政府18區資料指西九文化區佔地40公頃，提供23公頃開放空間，包括藝術公園和連續海濱長廊。</p></div>
+        <div class="info-block"><h3>短線走法</h3><p>藝術公園草地、M+ 外圍、故宮博物館外圍、海濱長廊來回。</p></div>
+        <div class="info-block"><h3>今日提醒</h3><p>海邊風大但地面平坦，撤退容易；日落和夜景都好看。</p></div>
+      </div>
+      <div class="source-row">資料/圖片：<a href="https://www.gohk.gov.hk/en/spots/spot_detail.php?spot=West+Kowloon+Cultural+District">政府18區 West Kowloon Cultural District</a></div>
+    </article>
+
+    <article class="card" id="place-hoisham">
+      <div class="card-head">
+        <div>
+          <div class="card-kicker">30｜土瓜灣海邊小公園</div>
+          <h2>海心公園 Hoi Sham Park</h2>
+        </div>
+        <div class="score"><strong>約30-40分鐘車程</strong>步行30-60分鐘</div>
+      </div>
+      <div class="photo-grid">
+        <figure><img src="hiking_report_assets/hoisham_1.jpg" alt="海心公園海邊" loading="lazy"><figcaption>海心公園</figcaption></figure>
+        <figure><img src="hiking_report_assets/hoisham_2.jpg" alt="海心公園平台" loading="lazy"><figcaption>海邊平台</figcaption></figure>
+        <figure><img src="hiking_report_assets/hoisham_3.jpg" alt="海心公園園景" loading="lazy"><figcaption>園景與魚尾石</figcaption></figure>
+      </div>
+      <div class="info">
+        <div class="info-block"><h3>泊車/入口</h3><p>導航 Hoi Sham Park / To Kwa Wan Road。泊土瓜灣或馬頭角附近合法停車場，由公園入口入。</p></div>
+        <div class="info-block"><h3>官方/真實資料</h3><p>政府18區頁面列出海心公園多張園景及魚尾石相片，是九龍城區海邊公園景點。</p></div>
+        <div class="info-block"><h3>短線走法</h3><p>公園、魚尾石、海邊平台、土瓜灣海濱短走；全程平路為主。</p></div>
+        <div class="info-block"><h3>今日提醒</h3><p>適合短時間、低體力、雨後不想爬山；海邊欄杆位有風。</p></div>
+      </div>
+      <div class="source-row">資料/圖片：<a href="https://www.gohk.gov.hk/en/spots/spot_detail.php?spot=Hoi+Sham+Park">政府18區 Hoi Sham Park</a></div>
+    </article>
+
     <section class="footer">
-      <p><strong>即日決策：</strong>今日最穩是山頂盧吉道、香港仔水塘、鶴藪水塘、新娘潭。若你由屯門即刻出發，最順路是黃金海岸、青山灣海濱長廊、三聖墟、屯門徑短線；若想影日落，揀白泥或龍鼓灘，但要天黑前返車。</p>
+      <p><strong>即日決策：</strong>今日最穩是山頂盧吉道、香港仔水塘、鶴藪水塘、新娘潭。若你由屯門即刻出發，最順路是黃金海岸、青山灣海濱長廊、三聖墟、屯門徑短線；若駕車去九龍也快，雨天/風大最穩是西九文化區、觀塘海濱、啟德郵輪碼頭公園、南蓮園池。想影城市高位景才選嘉頓山、格仔山、魔鬼山短線。</p>
       <p><strong>天氣資料：</strong><a href="https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=rhrread&lang=tc">天文台現時天氣</a>、<a href="https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=flw&lang=tc">本港天氣預測</a>、<a href="https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=warnsum&lang=tc">警告摘要</a>、<a href="https://www.hko.gov.hk/en/103461/Hong-Kong-Hiking-Trail-Weather-Service">行山天氣服務</a>。</p>
       <p>相片已保存於本機資料夾 <strong>hiking_report_assets</strong>，所以即使聊天框不顯示遠端圖片，打開本頁也應該可見完整圖文。</p>
     </section>
